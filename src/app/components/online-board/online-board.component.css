@@ -230,6 +230,7 @@ h2 {
 
 .black-player {
   background-color: rgba(0, 0, 0, 0.1);
+
 }
 
 .white-player {
@@ -245,4 +246,30 @@ h2 {
 .piece-count {
   font-size: 0.9rem;
   color: #666;
+}
+
+/* ... (mantieni il CSS esistente) ... */
+
+/* Aggiungi queste nuove regole alla fine del file */
+.board-container[data-player-team="BLACK"] .board-with-coordinates {
+  transform: rotate(180deg);
+}
+
+.board-container[data-player-team="BLACK"] .piece,
+.board-container[data-player-team="BLACK"] .col-label,
+.board-container[data-player-team="BLACK"] .row-label {
+  transform: rotate(180deg);
+}
+
+.board-container[data-player-team="BLACK"] .player-info.black-player {
+  order: 2;
+}
+
+.board-container[data-player-team="BLACK"] .player-info.white-player {
+  order: 1;
+}
+
+.board-container[data-player-team="BLACK"] .board-container {
+  display: flex;
+  flex-direction: column;
 }
